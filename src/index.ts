@@ -42,18 +42,18 @@ export const handler = async (event: any = {}): Promise<any> => {
 
   const secretValue = JSON.parse(secretsResponse.data.SecretString)[SECRET_KEY];
 
-  await axios.put(
-    API_URL,
-    {},
-    {
-      headers: {
-        "x-order-automation-api-key": secretValue,
-      },
-    }
-  );
+  // await axios.put(
+  //   API_URL,
+  //   {},
+  //   {
+  //     headers: {
+  //       "x-order-automation-api-key": secretValue,
+  //     },
+  //   }
+  // );
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: secretValue }),
+    body: JSON.stringify({ message: "HELLO FROM WORKFLOW!!!!" }),
   };
 };
