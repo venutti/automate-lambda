@@ -52,6 +52,8 @@ export const handler = async (event: any = {}): Promise<any> => {
   //   }
   // );
 
+  console.log("test");
+
   return {
     statusCode: 200,
     body: JSON.stringify({ message: "HELLO FROM WORKFLOW!!!!" }),
